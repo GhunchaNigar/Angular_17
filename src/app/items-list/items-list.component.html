@@ -1,0 +1,12 @@
+<div>
+    <button (click)="showitems=true">Show items</button>
+</div>
+<div>
+    @for(item of items; track i; let i=$index){
+        @defer (when showitems) {
+            <app-items [id]="i+1" /><br>
+
+        }
+    }
+</div>
+

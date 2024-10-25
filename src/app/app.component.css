@@ -1,0 +1,28 @@
+*{
+text-align: center;
+margin: 5px;
+font-size: 20px;
+
+}
+h1{
+    background-color: brown;
+    text-align: center;
+    color: white;
+}
+.heading{
+    font-size: 25px;
+}
+.one{
+    background-color: aqua;
+    color: brown;
+}
+.two{
+    background-color: azure;
+    color: black;
+}
+.three{
+    font-size: 25px;
+}
+.four{
+    font-size: 35px;
+}
