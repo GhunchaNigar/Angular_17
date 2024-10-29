@@ -92,15 +92,15 @@ Parent Component: <input type="text" #Pcomponent (keypress)="(0)" />
 <div [ngClass]="{ one: true, three: true }">ngClass with Object</div>
 <br />
 <h1>Interpolation</h1>
-My City is : <b>{{city}}</b>
+My City is : <b>{{ city }}</b>
 <button (click)="changecity()">Change City</button>
-<br>
+<br />
 <h1>Error Handling in Interpolation</h1>
-Name: {{company?company.name: 'No Data'}}<br/>
-city: {{company?company.city: 'No Data'}}<br/>
-State: {{company?company.state: 'No Data'}}<br/>
-Country: {{company?company.country: 'No Data'}}<br/>
-<br>
+Name: {{ company ? company.name : "No Data" }}<br />
+city: {{ company ? company.city : "No Data" }}<br />
+State: {{ company ? company.state : "No Data" }}<br />
+Country: {{ company ? company.country : "No Data" }}<br />
+<br />
 <h1>Attribute Binding</h1>
 <table border="1">
   <tr>
@@ -112,12 +112,75 @@ Country: {{company?company.country: 'No Data'}}<br/>
   </tr>
   <tr>
     <td>Last Name</td>
-    <td>Singh
-    </td>
+    <td>Singh</td>
   </tr>
   <tr>
     <td>Gender</td>
     <td>Male</td>
   </tr>
 </table>
+<br />
+<h1>Property Binding</h1>
+<br />
+<span [innerHTML]="name1"></span>
+<h1>Style Binding</h1>
+<br />
+<button [style.font-weight]="isbold">Click Here!</button>
+<br />
+<button [style.font-size.px]="35">Click Here!</button>
+<br />
+<h1>Class Binding</h1>
+<button class="colorclass" [class]="classestoapply">Click Here</button>
+<h1>Event Binding</h1>
+<button (click)="onchange1()">Click Here</button>
+<br />
+<input type="text" (keydown)="keydown()" (keyup)="keyup()" />
+<br />
+Enter Your Name: <input type="text" #txtname (keyup)="onclick(txtname.value)" />
+<br />
+Your Name is: <b>{{ name2 }}</b>
+<h1>Two way data Binding</h1>
+<br />
+<input type="text" [(ngModel)]="message" />
+<br />
+Your message: <b>{{ message }}</b>
+<br />
+<h1>Builin pipes</h1>
+<br />
+<h3>{{ data | uppercase }}</h3>
+<h3>{{ data1 | lowercase }}</h3>
+<h3>{{ data2 | titlecase }}</h3>
+<h3>{{ company | json }}</h3>
+<h3>{{ 123.56789364986 | number }}</h3>
+<h3>{{ 123.56789364986 | number : "2.3-5" }}</h3>
+<h3>{{ num1 | percent }}</h3>
+<h3>{{ num1 | currency : "USD" }}</h3>
+<h3>{{ currentDate }}</h3>
+<h3>{{ currentDate | date }}</h3>
+<h3>{{ currentDate | date : "shortDate" }}</h3>
+<h3>{{ currentDate | date : "longDate" }}</h3>
+<h3>{{ currentDate | date : "fullDate" }}</h3>
+<h3>{{ currentDate | date : "dd-MM-yyyy" }}</h3>
+<h1>Custom Pipes</h1>
+<h3>{{ name | myFirstPipe }}</h3>
+<h1>Service</h1>
+<h3>Service Message is: {{_msg}}<h3></h3>
+<h1>Singleton Service</h1>
+<app-comp1></app-comp1>
+<app-comp2></app-comp2>
 <app-items-list></app-items-list>
+<h1>Routing</h1>
+<a routerLink="Dashboard" routerLinkActive="active">Dashboard</a>
+<a routerLink="AboutUs" routerLinkActive="active">AboutUs</a>
+<a routerLink="ContactUs" routerLinkActive="active">ContactUs</a>
+<h1>Wildcard Routing</h1>
+<a routerLink="Portfolio" routerLinkActive="active">Portfolio</a>
+<router-outlet></router-outlet>
+<h1>Auxilliary Routes</h1>
+<a routerLink="[{outlets:{outlet2:['AboutUsnew']}}]">AboutUs New</a>
+<router-outlet name="outlet2"></router-outlet>
+<h1>Auth Guard</h1>
+<a routerLink="Login" routerLinkActive="active">Login</a>
+<app-login></app-login>
+<h1>Template Driven Forms</h1>
+<app-templateform></app-templateform>

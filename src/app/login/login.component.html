@@ -1,0 +1,20 @@
+<p>login works!</p>
+<table border="1">
+    <tr>
+        <td>User ID:</td>
+        <td><input type="text" #txtuserid></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="text" #txtpassword></td>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="login(txtuserid.value, txtpassword.value)">Login</button>
+        </td>
+        <td>
+            <button>Cancel</button>
+        </td>
+    </tr>
+
+</table>

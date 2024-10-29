@@ -1,28 +1,43 @@
-*{
-text-align: center;
-margin: 5px;
-font-size: 20px;
-
+* {
+  text-align: center;
+  margin: 5px;
+  font-size: 20px;
 }
-h1{
-    background-color: brown;
-    text-align: center;
-    color: white;
+h1 {
+  background-color: brown;
+  text-align: center;
+  color: white;
 }
-.heading{
-    font-size: 25px;
+.heading {
+  font-size: 25px;
 }
-.one{
-    background-color: aqua;
-    color: brown;
+.one {
+  background-color: aqua;
+  color: brown;
 }
-.two{
-    background-color: azure;
-    color: black;
+.two {
+  background-color: azure;
+  color: black;
 }
-.three{
-    font-size: 25px;
+.three {
+  font-size: 25px;
 }
-.four{
-    font-size: 35px;
+.four {
+  font-size: 35px;
+}
+.classcolor {
+  background-color: rgb(103, 129, 151);
+}
+.boldclass {
+  font-weight: bold;
+}
+.colorclass {
+  background-color: rgb(118, 118, 170);
+}
+.boldclass {
+  font-weight: bold;
+}
+.italicclass {
+  font-style: italic;
+  font-size: 35px;
 }

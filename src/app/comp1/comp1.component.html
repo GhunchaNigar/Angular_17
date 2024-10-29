@@ -1,0 +1,10 @@
+<p>comp1 works!</p>
+Enter Your number : <input type="text" #txtnum />
+<button (click)="addnumber(txtnum.value)">Add Number</button>
+@for(num of list1;track num){
+<ul>
+  <li>{{ num }}</li>
+</ul>
+}
+<button (click)="setdata()">Set Data at Local Storage</button>
+
